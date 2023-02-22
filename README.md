@@ -6,7 +6,7 @@ Barracuda is a research project funded by a National Science Foundation EPSCoR g
 
 ## Introduction to Programming
 
-#### Data structures (variables, data frames, lists, matricies, functions)
+#### Data structures (variables, data frames, lists, matrices, functions)
 
 ------
 
