@@ -24,8 +24,8 @@ Barracuda is a research project funded by a National Science Foundation EPSCoR g
 
 ------
 
-## Statistical Analysis 
+## Visualization
 
 ------
 
-## Visualization
+## Statistical Analysis 
