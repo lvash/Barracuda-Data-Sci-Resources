@@ -6,25 +6,17 @@ Barracuda is a research project funded by a National Science Foundation EPSCoR g
 
 ## Introduction to Programming
 
-### Data science concepts that span programming languages (variables, data frames, lists, matrices, functions)
-
-#### Intro to R
-
-#### Intro to SQL
-
-#### Intro to shell commands
-
-#### Intro to mark up languages
 
 ------
 
 ## Data Management and Wrangling
 
-#### Reproducibility: why is it important? what tools can you use?
+
 
 ------
 
 ## Visualization
+
 
 ------
 
