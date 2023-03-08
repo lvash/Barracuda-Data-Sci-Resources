@@ -1,9 +1,18 @@
 ## Outline for Statistical Analysis section  
 
-### Introduction to experimental design 
+
+
+### Introduction to experimental design, Statistical Distributions, & Distribution testing
 * Introduction: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/A_StatsIntro.mp4  
-  * categorical vs continuous  
-  * independent (x) vs dependent (y)
+  * Discrete Distributions
+    * Theory Lecture: https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=6&t=1s 
+    * Working with discrete Distributions in R: https://www.youtube.com/watch?v=ttZyFbECMDk&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=7
+  * Continuous Distributions
+    
+
+### Distributions and Distribution testing
+* Discrete Distributions
+* 
 
 ### ANOVA and t-tests
 * ANOVA in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/C_ANOVA.mp4
