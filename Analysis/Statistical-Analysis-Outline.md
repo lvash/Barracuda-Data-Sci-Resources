@@ -5,14 +5,18 @@
 ### Introduction to experimental design, Statistical Distributions, & Distribution testing
 * Introduction: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/A_StatsIntro.mp4  
   * Discrete Distributions
-    * Theory Lecture: https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=6&t=1s 
-    * Working with discrete Distributions in R: https://www.youtube.com/watch?v=ttZyFbECMDk&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=7
+    * [Tim Waring discrete distributions lecture](https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=6&t=1s)
+    * [Working with discrete distributions in R](https://www.youtube.com/watch?v=ttZyFbECMDk&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=7)
   * Continuous Distributions
-    
+    * [Tim Waring continuous distributions lecture](https://www.youtube.com/watch?v=saKPgMgIKFo&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=8)
+    * [Working with continuous distributions in R](https://www.youtube.com/watch?v=kAeKAcZMOLM&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=9)
+  * The Normal distribution
+    * [Tim Waring normal distribution Lecture](https://www.youtube.com/watch?v=S6-LJEgCX8w&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=10)
+    * [Working with the normal distribution in R](https://www.youtube.com/watch?v=JeIxShudFAE&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=13)
 
-### Distributions and Distribution testing
-* Discrete Distributions
+### Inferential Statistics & Hypothesis Testing
 * 
+
 
 ### ANOVA and t-tests
 * ANOVA in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/C_ANOVA.mp4
