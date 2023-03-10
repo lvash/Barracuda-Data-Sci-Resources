@@ -1,7 +1,7 @@
 ## Outline for Statistical Analysis section  
 
 ### Introduction to experimental design, Probability, Statistical Distributions, & Distribution testing
-* Introduction: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/A_StatsIntro.mp4  
+* [Gotelli Introduction to Statistics](http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/A_StatsIntro.mp4) 
 * Probability
   * [Tim Waring Probability Lecture](https://www.youtube.com/watch?v=lQ9zQ_s9ha8&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=5)
     * Probability notation & definitions
@@ -64,8 +64,26 @@
 
 ### Statistical Tests
 
+#### Differences in Means & Proportions
+* Differences in Means
+  * [Tim Waring Two Sample Hypothesis Tests](https://www.youtube.com/watch?v=lFi39kCoiwM&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=18)
+    * 11:38-End Covers Theory:
+      * 2 samples with a known population variance: z-test
+      * 2 sample populations without a known population variance: t-test
+      * 2 sample proportions: proportion z-test
+  * [Tim Waring One Sample Hypothesis Tests in R](https://www.youtube.com/watch?v=mlydrONjh04&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=17)
+    * T-tests with one sample - testing if mean is a given value
+    * proportion z test - testing if a proportion matches a hypothesized value
+    * Binomial test - testing if the number of successes matches a hypothesized number
+  * [Tim Waring Two Sample Hypothesis Tests in R](https://www.youtube.com/watch?v=tcrmxMibM0A&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=19)
+    * T-tests with two samples
+    * Cohen's D
+    * two sample proportion tests
 
-#### ANOVA and t-tests
+#### Dependence of 2 catagorical variables & contingency table analysis 
+* Contingency table analysis: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/E_Contingency.mp4
+
+#### ANOVA 
 * ANOVA in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/C_ANOVA.mp4
 
 #### Linear regression 
@@ -74,8 +92,7 @@
 #### Logistic regression 
 * Logistic regression in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/D_Logistic.mp4
 
-#### Chi-squared and contingency table analysis 
-* Contingency table analysis: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/E_Contingency.mp4
+
 
 #### More advanced
 
