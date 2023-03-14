@@ -2,6 +2,7 @@
 
 ### Introduction to experimental design, Probability, Statistical Distributions, & Distribution testing
 * [Gotelli Introduction to Statistics](http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/A_StatsIntro.mp4) 
+    * This video introduces different types of cause and effect relationships, null hypotheses testing, and types of variables. Dr. Gotelli discusses the differences between explanatory and response (predictor) variables, continous and discrete variables, and summarizes how to choose analyses and visualizations based on data types. 
 * Probability
   * [Tim Waring Probability Lecture](https://www.youtube.com/watch?v=lQ9zQ_s9ha8&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=5)
     * Probability notation & definitions
