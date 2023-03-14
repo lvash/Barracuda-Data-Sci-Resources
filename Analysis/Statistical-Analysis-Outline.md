@@ -9,6 +9,7 @@
     * Contingency Tables
     * Conditional Probability
     * Math with Probability (Could be supplemented with some of MD's stuff)
+  * [Nick Gotelli: Simulating Probability Distributions in R](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/A_IntroToProbabilityDist.mp4)
 * Discrete Distributions
   * [Tim Waring Discrete Distributions Lecture](https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=6&t=1s)
     * Covers some statistical epistemology and introduction to distributions
@@ -19,6 +20,9 @@
     * Expands the math and theory of the binomial distribution. Uses some mathmatical notation and gives an example using blood types.
   * [Working with Discrete Distributions in R](https://www.youtube.com/watch?v=ttZyFbECMDk&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=7)
     * covers: Binomial,Geometric, talks about the random number generator, pdf, cdf, & quantile functions.
+  * Nick Gotelli: Grammar of Distributions in R and Discrete Distributions 
+    * [Poisson and R's Grammar of distributions](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/B_PoissonGrammar.mp4)
+    * [Binomial and negative binomial distributions](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/C_BinomNegBinom.mp4)
 * Continuous Distributions
   * [Tim Waring Continuous Distributions Lecture](https://www.youtube.com/watch?v=saKPgMgIKFo&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=8)
     * Properties of a continusous distrobution, a little math, mostly based on pictures.
@@ -28,6 +32,7 @@
   * [Working with Continuous Distributions in R](https://www.youtube.com/watch?v=kAeKAcZMOLM&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=9)
     * covers: exponential, uniform, talks about the random number generator, pdf, cdf, & quantile functions.
     * mentions poisson
+  * [Nick Gotelli Continuous distributions](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/D_ContinuousDis.mp4)
 * The Normal distribution
   * [Tim Waring Normal Distribution Lecture](https://www.youtube.com/watch?v=S6-LJEgCX8w&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=10)
     * History with Gauss
@@ -50,6 +55,10 @@
     * Student's t-distribution
     * Calculation of a confidence interval
     * sample size requirements for a given confidence level.
+  * Nick Gotelli Parameter estimation
+    * [Maximum likelihood estimation of parameters](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/E_MaxLikeEst.mp4)
+    * [Example: Frog Body Size](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/F_FrogSize.mp4)    
+
 * Hypothesis testing basics
   * [Tim Waring One Sample Hypothesis Tests Theory Lecture](https://www.youtube.com/watch?v=3Pw7uKJU8LI&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=16)
     * Null & Alternative hypotheses
@@ -62,6 +71,7 @@
       * Random variable differences
       * Pooled variance or standard deviations
       * Cohen's d
+
 
 ### Statistical Tests
 
@@ -97,8 +107,15 @@
 
 #### More advanced
 
-##### Randomization tests
+##### Randomization tests in R
 * Introduction: http://www.uvm.edu/~ngotelli/Bio381Vids/02April2020/A_IntroRandomizationTest.mp4
 * Simple Example: http://www.uvm.edu/~ngotelli/Bio381Vids/02April2020/B_ToyExample.mp4
 * Functions for randomization tests: http://www.uvm.edu/~ngotelli/Bio381Vids/02April2020/C_FunctionsForRandomization.mp4
 * Running the analysis: http://www.uvm.edu/~ngotelli/Bio381Vids/02April2020/D_RunAnalysis.mp4
+
+
+#### Batch Processing in R
+* Batch processing Intro: http://www.uvm.edu/~ngotelli/Bio381Vids/07April2020/A_IntroAndPathNames.mp4
+* Create random files: http://www.uvm.edu/~ngotelli/Bio381Vids/07April2020/B_CreateRandomFiles.mp4
+* Batch analysis: http://www.uvm.edu/~ngotelli/Bio381Vids/07April2020/C_CreateRegressionFunction.mp4
+* Modify batch files: http://www.uvm.edu/~ngotelli/Bio381Vids/07April2020/D_ModifyBatchFiles.mp4
