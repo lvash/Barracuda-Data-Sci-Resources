@@ -9,7 +9,8 @@
     * Contingency Tables
     * Conditional Probability
     * Math with Probability (Could be supplemented with some of MD's stuff)
-  * [Nick Gotelli: Simulating Probability Distributions in R](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/A_IntroToProbabilityDist.mp4)
+  * [Nick Gotelli: Introduction to Probability Distributions](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/A_IntroToProbabilityDist.mp4)
+    * This video gives a broad introduction to probability distributions. Dr. Gotelli discusses the ranges, parameters, and interpretations of discrete distributions (Poisson, binomial, negative binomial) and continuous distributions (uniform, normal, gamma, and beta). He also gives a brief introduction to the probability distribution functions and their grammar in R.
 * Discrete Distributions
   * [Tim Waring Discrete Distributions Lecture](https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=6&t=1s)
     * Covers some statistical epistemology and introduction to distributions
@@ -20,19 +21,22 @@
     * Expands the math and theory of the binomial distribution. Uses some mathmatical notation and gives an example using blood types.
   * [Working with Discrete Distributions in R](https://www.youtube.com/watch?v=ttZyFbECMDk&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=7)
     * covers: Binomial,Geometric, talks about the random number generator, pdf, cdf, & quantile functions.
-  * Nick Gotelli: Grammar of Distributions in R and Discrete Distributions 
-    * [Poisson and R's Grammar of distributions](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/B_PoissonGrammar.mp4)
-    * [Binomial and negative binomial distributions](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/C_BinomNegBinom.mp4)
+  * Nick Gotelli: Discrete Probability Distributions in R
+    * [Poisson Distributions in R](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/B_PoissonGrammar.mp4)
+      * This video introduces the concepts and R coding grammar of the Poisson distribution. We explore the Poisson distribution in R using the probability density function (`dpois`), cumulative probability distribution (`ppois`), quantile function (`qpois`), and random generation of values (`rpois`). Dr. Gotelli uses qplot to visualize the arguments and parameters of each function and how they affect the distribution of values.
+    * [Binomial and negative binomial distributions in R](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/C_BinomNegBinom.mp4)
+      * This video introduces the concepts and R coding grammar of the binomial and negative binomial distributions. We explore these distribution in R using probability density functions (`dbinom`) and random generation of values (`rbinom` and `rnbinom`). Dr. Gotelli uses qplot to visualize the arguments and parameters of each function and how they affect the distribution of values. This video is preceded by one that discusses the discrete [Poisson distribution](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/B_PoissonGrammar.mp4) in R.
 * Continuous Distributions
   * [Tim Waring Continuous Distributions Lecture](https://www.youtube.com/watch?v=saKPgMgIKFo&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=8)
-    * Properties of a continusous distrobution, a little math, mostly based on pictures.
+    * Properties of a continuous distrobution, a little math, mostly based on pictures.
     * Uniform distribution (theory, moments, & probability density function)
     * Exponential distribution (Theory, moments, & probability density function)
     * mentions poisson in relation to exponential 
   * [Working with Continuous Distributions in R](https://www.youtube.com/watch?v=kAeKAcZMOLM&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=9)
     * covers: exponential, uniform, talks about the random number generator, pdf, cdf, & quantile functions.
     * mentions poisson
-  * [Nick Gotelli Continuous distributions](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/D_ContinuousDis.mp4)
+  * [Nick Gotelli Continuous distributions in R](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/D_ContinuousDis.mp4)
+    * This video introduces the concepts, parameters, and R coding grammar of continuous distributions: uniform, normal, gamma, and beta. Dr. Gotelli uses qplot and functions that randomly generate values of these distributions (`runif`, `rnorm`, `rgamma`, `rbeta`) to visualize how the arguments and parameters affect each distribution of values.
 * The Normal distribution
   * [Tim Waring Normal Distribution Lecture](https://www.youtube.com/watch?v=S6-LJEgCX8w&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=10)
     * History with Gauss
