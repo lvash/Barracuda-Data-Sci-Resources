@@ -38,15 +38,6 @@
 * Modify batch files: http://www.uvm.edu/~ngotelli/Bio381Vids/07April2020/D_ModifyBatchFiles.mp4
 
 
-### Simulating Data in R (belongs in stats?)
-* Simulating probability distributions Intro: http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/A_IntroToProbabilityDist.mp4
-* Poisson and R's Grammar of distributions: http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/B_PoissonGrammar.mp4
-* Binomial and negative binomial distributions: http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/C_BinomNegBinom.mp4
-* Continuous distributions: http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/D_ContinuousDis.mp4
-* Maximum likelihood estimation of parameters: http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/E_MaxLikeEst.mp4
-* Example: Frog Body Size: http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/F_FrogSize.mp4
-
-
 ### Data Wrangling 
 * Regular expressions
     * Introduction: http://www.uvm.edu/~ngotelli/Bio381Vids/L05_16Feb2021/A_RegexIntro.mp4
