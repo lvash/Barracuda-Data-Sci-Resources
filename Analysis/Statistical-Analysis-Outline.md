@@ -61,7 +61,9 @@
     * sample size requirements for a given confidence level.
   * Nick Gotelli Parameter estimation
     * [Maximum likelihood estimation of parameters](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/E_MaxLikeEst.mp4)
+      * In this video, Dr. Gotelli introduces general concepts and some code for using maximum likelihood to estimate statistical distribution parameters. Essentially, these methods help answer the question, "What is the probability of these parameters given my data?" 
     * [Example: Frog Body Size](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/F_FrogSize.mp4)    
+      * In this video, Dr. Gotelli uses a small empirical data set to code and expand on the concept of using maximum likelihood to estimate statistical distributions. It may be helpful to first view the parameter estimation [introductory video](http://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/E_MaxLikeEst.mp4) that precedes this one.  
 
 * Hypothesis testing basics
   * [Tim Waring One Sample Hypothesis Tests Theory Lecture](https://www.youtube.com/watch?v=3Pw7uKJU8LI&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=16)
@@ -95,21 +97,16 @@
     * Cohen's D
     * two sample proportion tests
 
-#### Dependence of 2 catagorical variables & contingency table analysis 
+#### Four archetypes of statistical analysis
+* Linear Regression in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/B_Regression.mp4  
+  * In this video, Dr. Gotelli discusses the appropriate data, code, and visualization for regression analysis in R. He goes over the simulation of data appropriate for a linear regression analysis, the `lm` function in R, the summary output, and creating a `ggplot` scatterplot. Further explanation of concepts can be found in the [introduction video](http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/A_StatsIntro.mp4). 
+* ANOVA in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/C_ANOVA.mp4
+  * In this video, Dr. Gotelli discusses the appropriate data, code, and visualization for an analysis for variance (ANOVA) in R. He goes over the simulation of data appropriate for ANOVA analysis, the `aov` function in R, and creating a box plox. Further explanation of concepts can be found in the [introduction video](http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/A_StatsIntro.mp4). 
+* Logistic regression in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/D_Logistic.mp4
 * Contingency table analysis: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/E_Contingency.mp4
 
-#### ANOVA 
-* ANOVA in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/C_ANOVA.mp4
 
-#### Linear regression 
-* Regression in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/B_Regression.mp4
-
-#### Logistic regression 
-* Logistic regression in R: http://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/D_Logistic.mp4
-
-
-
-#### More advanced
+#### More advanced analyses
 
 ##### Randomization tests in R
 * Introduction: http://www.uvm.edu/~ngotelli/Bio381Vids/02April2020/A_IntroRandomizationTest.mp4
