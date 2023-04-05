@@ -14,7 +14,7 @@ These resources are compiled from lectures and educational materials from Drs. M
 
 # Available Resources 
 
-## Computational Data 
+## Introduction to Computational Programming  
 A summary of what topics are covered. 
 
 ### subheading  
@@ -33,7 +33,7 @@ A summary of what topics are covered.
 * [link to another page]() 
 
 
-## Computational Programming  
+## Computational Data Management and Wrangling
 
 ## Data Visualization
 
