@@ -1,0 +1,42 @@
+---
+title: "Data Science Resources"
+author: "Barracuda"
+output: rmdformats::readthedown
+---
+
+<img src="barracuda_logo.jpeg" width="600" height="500" />
+
+
+## About Us
+Biodiversity And RuRal Adaptation to Climate change Using Data Analysis (Barracuda): [website](biobarracuda.org)
+
+These resources are compiled from lectures and educational materials from Drs. Matt Dube, Nicholas Gotelli, and Tim Waring.
+
+# Available Resources 
+
+## Computational Data 
+A summary of what topics are covered. 
+
+### subheading  
+
+* [link to another page]() 
+* [link to another page]() 
+
+### subheading   
+
+* [link to another page]()   
+* [link to another page]() 
+
+### subheading   
+* [link to another page]()  
+* [link to another page]()  
+* [link to another page]() 
+
+
+## Computational Programming  
+
+## Data Visualization
+
+## Data Analysis
+
+
