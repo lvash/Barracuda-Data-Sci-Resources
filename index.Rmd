@@ -27,16 +27,22 @@ A summary of what topics are covered.
 * [link to another page]()   
 * [link to another page]() 
 
-### subheading   
-* [link to another page]()  
-* [link to another page]()  
-* [link to another page]() 
-
 
 ## Computational Data Management and Wrangling
 
 ## Data Visualization
 
-## Data Analysis
+## Data Analysis  
 
+### Introduction to experimental design and statistical distributions
+
+* [Experimental Design](Stats_ExpDesign.html)  
+* [Probability](Stats_Probability.html)
+* Discrete Distributions  
+* Continuous Distributions
+
+### Inferential statistics and hypothesis testing 
+
+* Estimating parameters  
+* Basics of hypothesis testing   
 

@@ -1,0 +1,13 @@
+---
+title: "Experimental Design"
+author: "Barracuda"
+output: rmdformats::readthedown
+---
+
+## Intro to Statistics and Experimental Design
+
+[**Link to video**](https://www.uvm.edu/~ngotelli/Bio381Vids/L12_16Mar2021/A_StatsIntro.mp4)
+
+This video introduces different types of cause and effect relationships, null hypotheses testing, and types of variables. The lecture was geared towards biology, but can be applied to most disciplines. Dr. Gotelli discusses the differences between explanatory and response (predictor) variables, continous and discrete variables, and summarizes how to choose analyses and visualizations based on data types.   
+
+[Back Home](index.html)
