@@ -57,9 +57,9 @@ A summary of what topics are covered.
 
 ### Introduction to experimental design and statistical distributions
 
-* [Experimental Design](Stats_ExpDesign.html)  
-* [Probability](Stats_Probability.html)
-* Discrete Distributions  
+* [Experimental Design](Analysis/Stats_ExpDesign.html)  
+* [Probability](Analysis/Stats_Probability.html)
+* [Discrete Distributions](Analysis/Stats_discrete.html)  
 * Continuous Distributions
 
 ### Inferential statistics and hypothesis testing 
