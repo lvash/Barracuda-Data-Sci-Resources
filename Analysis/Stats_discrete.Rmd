@@ -1,0 +1,114 @@
+---
+title: "Discrete Probability Distributions"
+author: "Barracuda"
+output: rmdformats::readthedown
+bibliography: stat_refs.bib
+---
+<style type="text/css">
+   .main-container {max-width: 100%;}
+   .row {display: flex;}
+   .column {flex: 50%;}
+</style>
+
+```{r setup, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(kableExtra)
+```
+
+# Theory of the Descrete
+
+Discrete probability distributions are used to describe phenomena that can only take on distinct values. A classic example is the coin toss, where flipping a coin can only result in the coin landing on its heads side or its tails side. Listen to Dr. Waring discusses how probability unfolds when outcomes of concern only take on specific values:
+
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr")
+```
+
+# The Bernoulli Distribution
+
+The simplest discrete probability distribution is the Bernoulli distribution, named for the Swiss Mathematician Jacob Bernoulli. In his 1713 posthumous publication "Ars Conjectandi," Bernoulli described an event (now called a Bernoulli Trial) with two possible outcomes: success or failure. A coin toss is a classic example of a Bernoulli Trial 
+
+The Bernoulli distribution describes the probability of success for a single Bernoulli trial:
+
+$$\mathrm{Pr}(Success) = p = 1-\mathrm{Pr}(Success)=1-q $$
+where $p$ is the probability of success and $q$ is the probability of a failure. If a random variable $X$ follows a Bernoulli distribution, the mean is equal to $p$ and the variance is equal to $pq$:
+
+$$\mathrm{E}[X]=p\\\mathrm{Var}[X]=pq$$
+The Bernoulli distribution is graphically represented as a bar graph:
+
+```{r bernoulli,message=FALSE}
+data<-tibble(case = paste("Case",c(1,1,2,2,3,3)),
+             success = rep(c("success","failure"),3),
+             p=c(.5,.5,.3,.7,.6,.4))#create tibble of data
+data$success <- factor(data$success,levels = c("success","failure"))#define successes as a factor
+
+ggplot(data,aes(x=success,y=p,fill=success))+#create a bar graph of probabilities
+  geom_bar(stat = "identity",color="black")+
+  facet_grid(.~case)+
+  labs(x="Outcome",y="Pr(Outcome)")+
+  theme_classic()+
+  theme(legend.position = "none")
+
+```
+
+the `extraDistr` package in R allows us to work with Bernoulli distributions. The `dbern()` function calculates the probability density function of a given number of successes, `pbern()` calculates the cumulative density function, `qbern()` calculates the quantile function, and `rbern` is a random number generator for a given number of Bernoulli trials.
+
+The Bernoulli distribution, or rather the Bernoulli trial, is something of a base for all other discrete probability distributions. From the single trial, we can expand into multiple trials to look at count distributions, but first, let's expand the trial to explore when there are more than just two outcomes.
+
+## Categorical Distribution
+
+A categorical distribution describes the probabilities associated with trials with more than one outcome. For example, lets say we want to describe the eye color of a baby once it is born. In delivery rooms and hospital nurseries, eye color is typically recorded as discrete colors such as as brown, green, and blue. In reality, the genes that control eye color numerous and can produce a variety of colors [@whiteGenotypePhenotypeAssociations2011], but for the sake of argument, let's assume there are only the three mentioned above. 
+
+We would use a categorical distribution with three possible outcomes to describe the probability that one baby as each of the eye colors. We can define the individual probabilities of each eye color as:
+
+$$\mathrm{Pr}(Blue)=p_{blue}\\
+\mathrm{Pr}(Green) = p_{green}\\
+\mathrm{Pr}(Brown) = p_{brown}\\
+p_{blue}+p_{green}+p_{brown}=1$$
+
+Categorical distributions can be somewhat funky when trying to calculate their moments such as mean, median, or variance. Our Bernouilli distribution can have an average as it only has defined probability of success, but there's no real "success" here to speak of. It's better to define the mode for categorical variables, which is simply the category with the greatest $p$. 
+
+We can visualize categorical distributions using tables and graphs:
+
+
+```{r categorical dist 1, message=FALSE}
+eyecolor <- tibble(`Eye Color` = c("Green","Blue","Brown"), #create tibble with eye color probability information
+                   Probability=c(.3,.2,.5))
+kbl(eyecolor,label = "Eye Color Probability Table",align = "cc")%>%#create table of probabilities
+  kable_styling(bootstrap_options = c("striped","hover","condensed"),full_width = F)
+
+```
+
+
+```{r categorical dist 2, message=FALSE, fig.height=3,fig.width=5,fig.align='center'}
+
+ggplot(eyecolor,aes(x=`Eye Color`,y=Probability,fill=`Eye Color`))+#create bar graph of probabilities
+  geom_bar(stat = "identity")+
+  labs(y="Pr(Eye Color)")+
+  scale_fill_manual(values=c("dodgerblue1","saddlebrown","seagreen"))+
+  theme_classic()+
+  theme(legend.position = "none")
+
+```
+
+
+
+
+# Count Distributions
+
+
+## Binomial Distribution
+
+
+## Negative Binomial Distribution
+
+
+
+## Poisson Distribution 
+
+
+
+## Geometric Distribution
+
+
+## References
