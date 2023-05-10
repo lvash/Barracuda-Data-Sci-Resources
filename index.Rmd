@@ -4,7 +4,7 @@ author: "Barracuda"
 output: rmdformats::readthedown
 ---
 
-<img src="Pictures/barracuda_logo.jpeg" width="600" height="500" />
+<img src="Pictures/barracuda_logo.jpeg" width="500" height="400" />
 
 
 ## About Us
