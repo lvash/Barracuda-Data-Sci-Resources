@@ -26,11 +26,11 @@ vembedr::embed_url("https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5N
 
 # The Bernoulli Distribution
 
-The simplest discrete probability distribution is the Bernoulli distribution, named for the Swiss Mathematician Jacob Bernoulli. In his 1713 posthumous publication "Ars Conjectandi," Bernoulli described an event (now called a Bernoulli Trial) with two possible outcomes: success or failure. A coin toss is a classic example of a Bernoulli Trial 
+In his 1713 posthumous publication "Ars Conjectandi," Swiss Mathematician Jacob Bernoulli formulated the simplest discrete measurement as an event with two possible outcomes: success or failure. We currently name these events "Bernoulli Trials," and they are foundational to all discrete probability distributions. Bernoulli trials pervade our world: a coin toss results in a heads (success) or a tails (failure), a bus comes on time or it doesn't, we complete a work task on time or we don't. 
 
-The Bernoulli distribution describes the probability of success for a single Bernoulli trial:
+We call the mathematical representation of the probability of success in a single Bernoulli trial the "Bernoulli Distribution", and it is defined as: 
 
-$$\mathrm{Pr}(Success) = p = 1-\mathrm{Pr}(Success)=1-q $$
+$$\mathrm{Pr}(Success) = p = 1-\mathrm{Pr}(Failure)=1-q $$
 where $p$ is the probability of success and $q$ is the probability of a failure. If a random variable $X$ follows a Bernoulli distribution, the mean is equal to $p$ and the variance is equal to $pq$:
 
 $$\mathrm{E}[X]=p\\\mathrm{Var}[X]=pq$$
@@ -53,12 +53,19 @@ ggplot(data,aes(x=success,y=p,fill=success))+#create a bar graph of probabilitie
 
 the `extraDistr` package in R allows us to work with Bernoulli distributions. The `dbern()` function calculates the probability density function of a given number of successes, `pbern()` calculates the cumulative density function, `qbern()` calculates the quantile function, and `rbern` is a random number generator for a given number of Bernoulli trials.
 
-The Bernoulli distribution, or rather the Bernoulli trial, is something of a base for all other discrete probability distributions. From the single trial, we can expand into multiple trials to look at count distributions, but first, let's expand the trial to explore when there are more than just two outcomes.
+```{r bernoulli examples,warning=FALSE,message=FALSE}
+library(extraDistr)#attach extraDistr package
+p <- .1 #define probability of success
+dbern(1,p)#probability of a success
+pbern(0,p)#cumulative probability of a failure
+qbern(.1,p)#value of the cumulative distribution function at the probability of success
+rbern(10,p)#ten random Bernoulli trials
+
+```
 
 ## Categorical Distribution
 
-A categorical distribution describes the probabilities associated with trials with more than one outcome. For example, lets say we want to describe the eye color of a baby once it is born. In delivery rooms and hospital nurseries, eye color is typically recorded as discrete colors such as as brown, green, and blue. In reality, the genes that control eye color numerous and can produce a variety of colors [@whiteGenotypePhenotypeAssociations2011], but for the sake of argument, let's assume there are only the three mentioned above. 
-
+A categorical distribution describes the probabilities associated with trials with more than one outcome. For example, lets say we want to describe the eye color of a baby once it is born. In delivery rooms and hospital nurseries, eye color is typically recorded as discrete colors such as as brown, green, and blue. In reality, the genes that control eye color numerous and can produce a variety of colors, but for the sake of argument, let's assume there are only the three mentioned above. 
 We would use a categorical distribution with three possible outcomes to describe the probability that one baby as each of the eye colors. We can define the individual probabilities of each eye color as:
 
 $$\mathrm{Pr}(Blue)=p_{blue}\\
@@ -66,7 +73,7 @@ $$\mathrm{Pr}(Blue)=p_{blue}\\
 \mathrm{Pr}(Brown) = p_{brown}\\
 p_{blue}+p_{green}+p_{brown}=1$$
 
-Categorical distributions can be somewhat funky when trying to calculate their moments such as mean, median, or variance. Our Bernouilli distribution can have an average as it only has defined probability of success, but there's no real "success" here to speak of. It's better to define the mode for categorical variables, which is simply the category with the greatest $p$. 
+Categorical distributions can be somewhat funky when trying to calculate their moments such as mean, median, or variance. Our Bernouilli distribution can have a mean as it only has one probability: that of success. In categorical outcomes there's no real "success" to speak of and there are multiple probabilities. It's better to define the mode for categorical variables, which is the category with the greatest $p$. 
 
 We can visualize categorical distributions using tables and graphs:
 
@@ -92,23 +99,191 @@ ggplot(eyecolor,aes(x=`Eye Color`,y=Probability,fill=`Eye Color`))+#create bar g
 ```
 
 
-
-
 # Count Distributions
-
+The simplicity of the Bernoulli trial is what gives it the versatility to be used for a host of other discrete probability distributions. We'll start with the binomial distribution, which is just an extension of the Bernoulli distribution, and move on to more complex versions and special cases.
 
 ## Binomial Distribution
+A binomial distribution is a Bernoulli distribution with more than one Bernoulli trial represented. Here, Dr. Waring talks about the binomial distribution from 13:50 to 20:50:
+```{r echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5NKkqQKwo4hUZeMaoJzmdOddr&index=6")
+```
+
+and here, Dr. Gotelli talks about the binomial distribution
+
+[insert link to Nicks video]
+
+As Dr. Waring and Dr. Gotelli discussed, a binomial distribution shows the probability of different numbers of success given two parameters: the number of trials, and the probability of success per Bernoulli trial. The probability density function of x number of successes is:
+
+$$\mathrm(Pr)(x) = \biggl(\frac{n!}{(n-x)!x!}\biggl)p^x(1-p)^{n-x}$$
+where 
+
+* $x$ is the number of successes
+* $n$ is the number of trials
+* $p$ is the probability of success for one Bernoulli trial
+
+Like Bernoulli distributions, the binomial distribution has a mean and a standard deviation:
+
+$$
+\mathrm{E}[x] = np\\
+\mathrm{Var}[x] = np(1-p)\\
+\mathrm{Sd}[x] = \sqrt{np(1-p)}
+$$
+Like Bernoulli distributions, binomial distributions are often represented as bar charts, but they only give the probability of a given number of successes, instead of the probability of a success and a failure. Below are three binomial distributions for 10 bernoulli trials with different probabilities of success
+
+```{r binom graph}
+data <- tibble(x=rep(1:10))%>%
+  mutate(`p = 0.3`=dbinom(x,10,0.3),
+         `p = 0.5`=dbinom(x,10,0.5),
+         `p = 0.6`=dbinom(x,10,0.6))%>%
+  gather("prob","p",2:4)
+
+ggplot(data,aes(x=x,y=p))+
+  geom_bar(stat="identity",color="black",fill="darkred")+
+  facet_wrap(prob~.,nrow=3,ncol=1)+
+  labs(y="Probability of x successes")+
+  theme_classic()
+
+
+```
+
+To work with binomial distributions in R, we need only use the base `stats` package's built in `d`, `p`, `q`, and `r` functions with the `binom()` suffix.
+
+```{r binomial functions}
+x <- 1:10 #vector of successes
+n <- 10 # number of trials
+p <- .5 # probability of success for one Bernoulli trial
+
+# probability density function
+dbinom(x,n,p)
+
+#cumulative density function
+pbinom(x,n,p)
+
+#quantile function
+qbinom(c(.05,.1,.5),n,p)
+
+#random number generator to generate 10 random numbers of successes
+rbinom(10,n,p)
+```
 
 
 ## Negative Binomial Distribution
+The first extension of the binomial distribution is the negative binomial distribution. As Dr. Gotelli mentioned in the previous video, this distribution models the number of failure that will occur until a non-random number of successes occur in a series of Bernoulli trials. This may seem like an odd way to model a process, but an example will make it easier to understand. Lets say a chef in a popular restaurant is interested in hiring a brunch line cook that is good at cracking eggs. The chef assumes that cracking an egg without getting any shell in it is a success and getting some shell in it is a failure because they will have to spend extra time fishing out the shell before it can be put on the grill. Because of this, the chef has applicant cooks crack a series of eggs until they get 5 successful egg cracks, and hires those one with the least failed cracks.
 
+The number of failed egg cracks could be modeled as negative binomial process, because the chef is looking at the number of failed egg cracks before a non-random number of successful cracks occurs. The probability density function for number of failed egg cracks $x$ is:
 
+$$\mathrm{Pr}(x)=\biggl(\frac{(x+r-1)!}{(r-1)!x!}\biggl)(1-p)^xp^r$$
+where
+
+* $r$ is the number of successes
+* $x$ is the number of failures
+* $p$ is the probability of success for a single egg cracks
+
+Negative binomial distributions have a mean number of failures and definable variances and standard deviations:
+
+$$\mathrm{E}[x] = \frac{r(1-p)}{p}\\
+\mathrm{Var[x]} = \frac{r(1-p)}{p^2}\\
+\mathrm{Sd}[x] = \sqrt{\frac{r(1-p)}{p^2}}$$
+
+The graphical representations of regular binomial distributions are bounded between zero and the number of trials. Negative binomial distributions, on the other hand, technically have no upper bound, since there are no set number of trials, just a set number of successes. As such, the bar charts used to represent them change in shape and range based on $p$ and $r$ (note, we impose an an arbitrary upper bound at 20, but the probabilities extend beyond):
+
+```{r negbin graphic}
+data <- tibble(x=rep(1:20,6),
+               r = c(rep(3,40),rep(5,40),rep(7,40)),
+               prob = rep(c(rep(.15,20),rep(.3,20)),3))%>%
+  mutate(p = dnbinom(x,r,prob))
+
+ggplot(data,aes(x=x,y=p))+
+  geom_bar(stat="identity",fill="#7B0D1E",color="black")+
+  facet_grid(prob~r)+
+  labs(x="Number of Failures",y="Probability of x Failures",subtitle = "Number of Successes")+
+  scale_y_continuous(sec.axis = sec_axis(~.,name = "Probability of Success in one Bernoulli trial"))+
+  theme_classic()+
+  theme(plot.subtitle = element_text(hjust=.5),
+        axis.text.y.right = element_blank(),
+        axis.ticks.y.right = element_blank())
+
+```
+As we can see from the above graphs, the lower the probability of success in one trial and the higher the number of successes required, the lower the probability of few failures before reaching that point.
+
+We can calculate probabilities and random numbers that follow a negative binomial distribution in R using the `stats` package:
+
+```{r neg-binomial functions}
+x <- 1:10 #vector of failures
+n <- 5 # number of successe
+p <- .3 # probability of success for one Bernoulli trial
+
+# probability density function
+dnbinom(x,n,p)
+
+#cumulative density function
+pnbinom(x,n,p)
+
+#quantile function
+qnbinom(c(.05,.1,.5),n,p)
+
+#random number generator to generate 10 random numbers of failures 
+rnbinom(10,n,p)
+```
 
 ## Poisson Distribution 
 
+Knowing the number of Bernoulli trials is key to estimating probabilities using a binomial distribution, but what is one to do if they don't know the number of trials? In many cases, if there is a presumable abundance of trials, one can use a Poisson distribution. Named after Siméon Denis Poisson, who derived it while studying the number of wrongful convictions, is used to describe the number of events that occur in a fixed interval of time or space based on the average number of events to occur. Here's Dr. Gotelli describing the distribution and its use in R:
+
+[insert nick's video]
+
+The poisson distribution has one parameter, usually denoted with the greek symbol $\lambda$, which is the average number of events in a given time frame o unit of space. One unique feature of $\lambda$ is that describes both the mean and the variance of the distribution. The probability density function that an event occurs $x$ times is:
+
+$$\mathrm{Pr}(x)=\frac{\lambda^xe^{-\lambda}}{x!}$$
+where
+
+* $\lambda$ is the average number of events
+* $e$ is the Euler's constant
+
+As with the negative binomial distribution, the poisson distribution has no upper bound. 
+
+```{r pois chart}
+data <- tibble(x = rep(1:30,3),
+               lambda = c(rep(2,30),rep(5,30),rep(10,30)))%>%
+  mutate(prob=dpois(x,lambda))
+
+ggplot(data,aes(x=x,y=prob))+
+  geom_bar(stat="identity",fill="#7B0D1E",color="black")+
+  facet_grid(lambda~.)+
+  scale_y_continuous(sec.axis = sec_axis(~.,name = bquote(lambda)))+
+  labs(y="probability of x events")+
+  theme_classic()+
+  theme(plot.subtitle = element_text(hjust=.5),
+        axis.text.y.right = element_blank(),
+        axis.ticks.y.right = element_blank())
+
+```
+As the number of average events increases, the probability charts start to resemble traditional bell curves. In some cases, researchers use [insert link to continuous normal distributions] to approximate poisson distributions for ease of calculation.
+
+Poisson distributions probability functions and random number generators are built in to the base `stats` package:
+
+```{r poisson functions}
+x <- 1:10 #vector of possible event counts
+lambda <- 5 # average number of successes
+
+# probability density function
+dpois(x,lambda)
+
+#cumulative density function
+ppois(x,lambda)
+
+#quantile function
+qpois(c(.05,.1,.5),lambda)
+
+#random number generator to generate 10 random numbers of failures 
+rpois(10,lambda)
+```
 
 
 ## Geometric Distribution
+
+
+## Multinomial Distribution
 
 
 ## References
