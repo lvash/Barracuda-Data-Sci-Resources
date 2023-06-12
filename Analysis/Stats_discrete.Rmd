@@ -16,7 +16,7 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-# Theory of the Descrete
+# Theory of the Discrete
 
 Discrete probability distributions are used to describe phenomena that can only take on distinct values. A classic example is the coin toss, where flipping a coin can only result in the coin landing on its heads side or its tails side. Listen to Dr. Waring discusses how probability unfolds when outcomes of concern only take on specific values:
 
@@ -110,7 +110,7 @@ vembedr::embed_url("https://www.youtube.com/watch?v=fc_VxxK10ps&list=PLxdDmPeA5N
 
 and here, Dr. Gotelli talks about the binomial distribution
 
-[insert link to Nicks video]
+https://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/C_BinomNegBinom.mp4 
 
 As Dr. Waring and Dr. Gotelli discussed, a binomial distribution shows the probability of different numbers of success given two parameters: the number of trials, and the probability of success per Bernoulli trial. The probability density function of x number of successes is:
 
@@ -230,9 +230,9 @@ rnbinom(10,n,p)
 
 Knowing the number of Bernoulli trials is key to estimating probabilities using a binomial distribution, but what is one to do if they don't know the number of trials? In many cases, if there is a presumable abundance of trials, one can use a Poisson distribution. Named after Siméon Denis Poisson, who derived it while studying the number of wrongful convictions, is used to describe the number of events that occur in a fixed interval of time or space based on the average number of events to occur. Here's Dr. Gotelli describing the distribution and its use in R:
 
-[insert nick's video]
+https://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/B_PoissonGrammar.mp4
 
-The poisson distribution has one parameter, usually denoted with the greek symbol $\lambda$, which is the average number of events in a given time frame o unit of space. One unique feature of $\lambda$ is that describes both the mean and the variance of the distribution. The probability density function that an event occurs $x$ times is:
+The Poisson distribution has one parameter, usually denoted with the greek symbol $\lambda$, which is the average number of events in a given time frame o unit of space. One unique feature of $\lambda$ is that describes both the mean and the variance of the distribution. The probability density function that an event occurs $x$ times is:
 
 $$\mathrm{Pr}(x)=\frac{\lambda^xe^{-\lambda}}{x!}$$
 where
@@ -240,7 +240,7 @@ where
 * $\lambda$ is the average number of events
 * $e$ is the Euler's constant
 
-As with the negative binomial distribution, the poisson distribution has no upper bound. 
+As with the negative binomial distribution, the Poisson distribution has no upper bound. 
 
 ```{r pois chart}
 data <- tibble(x = rep(1:30,3),

@@ -14,10 +14,10 @@ vembedr::embed_url("https://www.youtube.com/watch?v=lQ9zQ_s9ha8&list=PLxdDmPeA5N
 This video by Dr. Waring goes over probability notation and definitions, contingency tables, and conditional probability.
 
 
-## Intro to Probability Distributions
+## Intro to Probability Distributions  
+
 [**Link to video**](https://www.uvm.edu/~ngotelli/Bio381Vids/L11_11Mar2021/A_IntroToProbabilityDist.mp4)   
 This video gives a broad introduction to probability distributions. Dr. Gotelli discusses the ranges, parameters, and interpretations of discrete distributions (Poisson, binomial, negative binomial) and continuous distributions (uniform, normal, gamma, and beta). He also gives a brief introduction to the probability distribution functions and their grammar in R.
-
 
 
 [Back Home](index.html)
